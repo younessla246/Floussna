@@ -1,214 +1,343 @@
-    <!DOCTYPE html>
-    <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>FLOUSSNA | Digital Banking by NOMIKO</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">    
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOUSSNA | Digital Banking by NOMIKO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <nav>
-            <div class="container nav-flex">
-                <div class="logo">FLOU<span>SSNA</span></div>
-                <ul class="nav-links">  
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#partenaires">Partenaires</a></li>
-                    <li><a href="#equipe">L'Équipe</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#installation" class="btn-nav">Installer l'app</a></li>
-                </ul>
+    <nav>
+        <div class="container nav-flex">
+            <div class="logo">FLOU<span>SSNA</span></div>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-        </nav>
 
-        <header class="hero">
-            <div class="container hero-grid">
-                <div class="hero-text">
-                    <span class="badge-tag">Projet Co-fondé par NOMIKO</span>
-                    <h1>Bienvenue dans le futur de la <span>finance.</span></h1>
-                    <p>Une solution pensée par <strong>NOMIKO</strong> pour offrir une expérience bancaire fluide, sécurisée et parfaitement adaptée aux besoins de notre génération à l'UM6P.</p>
-                    
-                    <div class="app-links-badges" id="installation">
-                        <a href="#" class="install-button">
-                            <div class="img-container">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
-                            </div>
-                        </a>
-                        <a href="#" class="install-button">
-                            <div class="img-container">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store">
-                            </div>
-                        </a>
-                    </div>
-                </div>
+            <ul class="nav-links">  
+                <li><a href="#services" class="lang" data-en="Services" data-fr="Services">Services</a></li>
+                <li><a href="#partenaires" class="lang" data-en="Partners" data-fr="Partenaires">Partners</a></li>
+                <li><a href="#team" class="lang" data-en="Team" data-fr="L'Équipe">Team</a></li>
+                <li><a href="#contact" class="lang" data-en="Contact" data-fr="Contact">Contact</a></li>
+                <li><a href="#" class="btn-nav lang" data-en="Install" data-fr="Installer" onclick="highlightStores()">Install</a></li>
+                <li class="lang-switcher">
+                    <button onclick="switchLang('en')" id="btn-en" class="active">EN</button>
+                    <button onclick="switchLang('fr')" id="btn-fr">FR</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-                <div class="hero-image">
-                    <div class="app-identity-wrapper">
-                        <img src="floussna_icone.jpeg" class="app-icone-large" alt="Icône FLOUSSNA">
-                        <p class="app-name-display">FLOUSSNA</p>
-                    </div>
-                </div>
-
-            </div>
-        </header>
-
-        <section class="app-description-detail">
-            <div class="container">
-                <div class="description-content">
-                    <span class="vision-badge">The Multiplayer Banking Vision</span>
-                    <h2>Invisible, Automated, <span>Shared Ledger</span></h2>
-                    <p>
-                        <strong>Nomisma Koinos (branded as Nomiko)</strong> is an API-first social savings infrastructure that transforms banking from a solitary activity into a <strong>"multiplayer" experience</strong> designed for the "Code 30" generation. 
-                    </p>
-                    <p>
-                        Built on the principles of <strong>Embedded Finance and Banking-as-a-Service (BaaS)</strong>, the platform allows communities to pool resources seamlessly within their existing social workflows. Key features include a <strong>Round-Up Engine</strong> that automatically captures spare change from daily transactions to fund group goals, and a <strong>Multi-Sig Approval protocol</strong> to ensure secure, consensus-based withdrawals.
-                    </p>
-                    <p>
-                        Additionally, the app utilizes <strong>Velocity Analytics</strong> to predict goal completion dates based on spending patterns, effectively replacing the friction of manual transfers and awkward money tracking with an invisible, automated shared ledger.
-                    </p>    
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="features">
-            <div class="container">
-                <h2 class="section-title">Nos Services Premium</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
-                        <h3>Sécurité</h3>
-                        <p>Protection avancée de vos transactions par cryptage bancaire de nouvelle génération.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-                        <h3>Suivi</h3>
-                        <p>Historique intelligent et détaillé pour une gestion parfaite de votre budget étudiant.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-                        <h3>Vitesse</h3>
-                        <p>Transferts et paiements validés en quelques millisecondes partout au Maroc.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="partenaires" class="partners-section">
-            <div class="conta       iner">
-                <p class="partners-text">ILS NOUS ACCOMPAGNENT DANS L'AVENTURE</p>
-                <div class="partners-grid">
-                    <div class="partner-logo">UM6P</div>
-                    <div class="partner-logo">CIH BANK</div>
-                    <div class="partner-logo">MASTERCARD</div>
-                    <div class="partner-logo">VISA</div>
-                    <div class="partner-logo">STARTGATE</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="equipe" class="company-section">
-            <div class="container">
-                <h2 class="section-title">À l'origine du projet</h2>
-                <div class="company-grid">
-                    <div class="company-card">
-                        <div class="company-avatar">N</div>
-                        <h3>NOMIKO</h3>
-                        <p class="role">Co-fondateur & Visionnaire</p>
-                        <p>Passionné par l'innovation fintech et le développement de solutions centrées sur l'utilisateur au sein de l'UM6P à Ben Guerir.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="team" class="team-section">
-            <div class="container">
-                <h2 class="section-title">Built by Future Engineers.</h2>
-                <div class="team-grid">
-                    <div class="team-card">
-                        <div class="headshot-placeholder">
-                            <img src="image.webp" alt="Anass Fertat - Co-Founder and Technical Lead at NOMIKO">
-                        </div>
-                        <h3 class="team-name">Anass Fertat</h3>
-                        <div class="team-role">Co-Founder & Technical Lead</div>
-                        <div class="team-bio">anass.fertat@nomiko.ma</div>
-                        <div class="footer-socials">
-                            <a href="https://github.com/alae-66/nomisma-koinos" target="_blank" rel="noopener noreferrer" aria-label="Anass Fertat GitHub Profile"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/anass-fertat-375120329/" target="_blank" rel="noopener noreferrer" aria-label="Anass Fertat LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
-                        </div>  
-                    </div>
-
-                    <div class="team-card">
-                        <div class="headshot-placeholder">
-                            <img src="image.webp" alt="Alae Sabir - Co-Founder and Technical Lead at NOMIKO">
-                        </div>
-                        <h3 class="team-name">Alae Sabir</h3>
-                        <div class="team-role">Co-Founder & Technical Lead</div>
-                        <div class="team-bio">alae.sabir@nomiko.ma</div>
-                        <div class="footer-socials">
-                            <a href="https://github.com/alae-66/nomisma-koinos" target="_blank" rel="noopener noreferrer" aria-label="Alae Sabir GitHub Profile"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/alae-sabir-9b7a3633a/" target="_blank" rel="noopener noreferrer" aria-label="Alae Sabir LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="team-card">
-                        <div class="headshot-placeholder">
-                            <img src="image.webp" alt="Youness Latif - Co-Founder and Technical Lead at NOMIKO">
-                        </div>
-                        <h3 class="team-name">Youness Latif</h3>
-                        <div class="team-role">Co-Founder & Technical Lead</div>
-                        <div class="team-bio">youness.latif@nomiko.ma</div>
-                        <div class="footer-socials">
-                            <a href="https://github.com//younessla246" target="_blank" rel="noopener noreferrer" aria-label="Youness Latif GitHub Profile"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/youness-youn-3028b7323/" target="_blank" rel="noopener noreferrer" aria-label="Youness Latif LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2 class="section-title">Contact & Localisation</h2>
-                <div class="contact-grid">
-                    <div class="contact-form">
-                        <h3>Contactez l'équipe</h3>
-                        <form>
-                            <input type="text" placeholder="Nom complet" required>
-                            <input type="email" placeholder="Email" required>
-                            <textarea placeholder="Votre message..." rows="5" required></textarea>
-                            <button type="submit" class="btn-send">Envoyer</button>
-                        </form>
-                    </div>
-                    <div class="contact-info">
-                        <div class="info-box">
-                            <h3>Coordonnées</h3>
-                            <p><i class="fas fa-map-marker-alt"></i> <strong>Adresse :</strong> Campus UM6P, Ben Guerir, Maroc</p>
-                            <p><i class="fas fa-envelope"></i> <strong>Email :</strong> contact@nomiko.ma</p>
-                        </div>
-                        <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3386.368725845014!2d-7.951012323530392!3d32.22728957388796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdaf67666f7f631b%3A0x633d455b85a1a1f0!2sUM6P%20-%20Mohammed%20VI%20Polytechnic%20University!5e0!3m2!1sfr!2sma!4v1713500000000!5m2!1sfr!2sma" 
-                            width="100%" height="220" style="border:0; border-radius:15px;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <div class="container footer-content">
-                <p>© 2026 FLOUSSNA Fintech. Co-fondé par NOMIKO. Réalisé avec passion à Ben Guerir.</p>
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <span class="badge-tag lang" data-en="Project Co-founded by NOMIKO" data-fr="Projet Co-fondé par NOMIKO">Project Co-founded by NOMIKO</span>
+                <h1 class="lang" data-en="Welcome to the future of <span>finance.</span>" data-fr="Bienvenue dans le futur de la <span>finance.</span>">Welcome to the future of <span>finance.</span></h1>
+                <p class="lang" 
+                   data-en="A solution designed by NOMIKO to provide a seamless, secure banking experience tailored to the needs of our generation at UM6P." 
+                   data-fr="Une solution pensée par NOMIKO pour offrir une expérience bancaire fluide, sécurisée et parfaitement adaptée aux besoins de notre génération à l'UM6P.">
+                   A solution designed by NOMIKO to provide a seamless, secure banking experience tailored to the needs of our generation at UM6P.
+                </p>
                 
-                <div class="social-platforms">
-                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <div class="app-links-badges" id="installation">
+                    <a href="https://play.google.com/store/apps/details?id=VOTRE_ID_APPLICATION" class="install-button" target="_blank">
+                        <div class="img-container">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+                        </div>
+                    </a>
+
+                    <a href="https://apps.apple.com/app/VOTRE_NOM_APP/idVOTRE_ID" class="install-button" target="_blank">
+                        <div class="img-container">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store">
+                        </div>
+                    </a>
                 </div>
             </div>
-        </footer>
 
-    </body>
-    </html>
+            <div class="hero-image">
+                <div class="app-identity-wrapper">
+                    <img src="images/floussna_icone.jpeg" class="app-icone-large" alt="Icône FLOUSSNA">
+                    <p class="app-name-display">FLOUSSNA</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="showcase" class="app-showcase-3d">
+        <div class="container">
+            <h2 class="section-title lang" data-en="Experience the Interface" data-fr="Vivez l'Interface">Experience the Interface</h2>
+            
+            <div class="carousel-3d-scene">
+                <div class="carousel-3d">
+                    
+                    <div class="carousel-3d-item is-front">
+                        <div class="phone-mockup-store">
+                            <div class="screen-content">
+                                <img src="images/home_page.jpeg" alt="FLOUSSNA Home Screen">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-3d-item is-right">
+                        <div class="phone-mockup-store">
+                            <div class="screen-content">
+                                <img src="images/wallet.jpeg" alt="FLOUSSNA Wallet Screen">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-3d-item is-left">
+                        <div class="phone-mockup-store">
+                            <div class="screen-content">
+                                <img src="images/wallet_view.jpeg" alt="FLOUSSNA Wallet View">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="control-btn prev-btn" onclick="rotateCarousel(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="control-btn next-btn" onclick="rotateCarousel(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-description-detail">
+        <div class="container">
+            <div class="description-content">
+                <span class="vision-badge lang" data-en="The Multiplayer Banking Vision" data-fr="La Vision du Banking Multiplayer">The Multiplayer Banking Vision</span>
+                
+                <h2 class="lang" data-en="Invisible, Automated, <span>Shared Ledger</span>" data-fr="Ledger Partagé, Invisible et <span>Automatisé</span>">Invisible, Automated, <span>Shared Ledger</span></h2>
+                
+                <div class="content-en">
+                    <p><strong>Nomisma Koinos (branded as Nomiko)</strong> is an API-first social savings infrastructure that transforms banking from a solitary activity into a <strong>"multiplayer" experience</strong> designed for the "Code 30" generation.</p>
+                    <p>Built on the principles of <strong>Embedded Finance and Banking-as-a-Service (BaaS)</strong>, the platform allows communities to pool resources seamlessly within their existing social workflows. Key features include a <strong>Round-Up Engine</strong> that automatically captures spare change from daily transactions to fund group goals, and a <strong>Multi-Sig Approval protocol</strong> to ensure secure, consensus-based withdrawals.</p>
+                    <p>Additionally, the app utilizes <strong>Velocity Analytics</strong> to predict goal completion dates based on spending patterns, effectively replacing the friction of manual transfers and awkward money tracking with an invisible, automated shared ledger.</p>
+                </div>
+
+                <div class="content-fr" style="display: none;">
+                    <p><strong>Nomisma Koinos (sous la marque Nomiko)</strong> est une infrastructure d’épargne sociale orientée API qui transforme la banque d’une activité solitaire en une <strong>expérience "multijoueur"</strong> conçue pour la génération "Code 30".</p>
+                    <p>Basée sur les principes de la <strong>Finance Embarquée et du Banking-as-a-Service (BaaS)</strong>, la plateforme permet aux communautés de mutualiser leurs ressources de manière fluide. Les fonctionnalités clés incluent un <strong>Moteur de Round-Up</strong> qui capture automatiquement la monnaie de vos transactions quotidiennes, et un protocole d’approbation <strong>Multi-Sig</strong> pour garantir des retraits sécurisés basés sur le consensus.</p>
+                    <p>De plus, l’application utilise la <strong>Velocity Analytics</strong> pour prédire les dates d’achèvement des objectifs, remplaçant les transferts manuels fastidieux par un registre partagé, invisible et automatisé.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="features">
+        <div class="container">
+            <h2 class="section-title lang" data-en="Our Premium Services" data-fr="Nos Services Premium">Our Services</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3 class="lang" data-en="Security" data-fr="Sécurité">Security</h3>
+                    <p class="lang" data-en="Advanced protection for your transactions via next-gen banking encryption." data-fr="Protection avancée de vos transactions par cryptage bancaire de nouvelle génération.">Advanced protection for your transactions via next-gen banking encryption.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="lang" data-en="Tracking" data-fr="Suivi">Tracking</h3>
+                    <p class="lang" data-en="Smart and detailed history for perfect management of your student budget." data-fr="Historique intelligent et détaillé pour une gestion parfaite de votre budget étudiant.">Smart and detailed history for perfect management of your student budget.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                    <h3 class="lang" data-en="Speed" data-fr="Vitesse">Speed</h3>
+                    <p class="lang" data-en="Transfers and payments validated in milliseconds throughout Morocco." data-fr="Transferts et paiements validés en quelques millisecondes partout au Maroc.">Transfers and payments validated in milliseconds throughout Morocco.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="partenaires" class="partners-section">
+        <div class="container">
+            <p class="partners-text lang" data-en="SUPPORTING OUR JOURNEY" data-fr="ILS NOUS ACCOMPAGNENT DANS L'AVENTURE">SUPPORTING OUR JOURNEY</p>
+            <div class="partners-grid">
+                <div class="partner-logo">UM6P</div>
+                <div class="partner-logo">CIH BANK</div>
+                <!-- <div class="partner-logo">MASTERCARD</div> -->
+                <!-- <div class="partner-logo">VISA</div> -->
+                <!-- <div class="partner-logo">STARTGATE</div> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="equipe" class="company-section">
+        <div class="container">
+            <h2 class="section-title lang" data-en="Project Origins" data-fr="À l'origine du projet">Project Origins</h2>
+            <div class="company-grid">
+                <div class="company-card">
+                    <div class="company-avatar">N</div>
+                    <h3>NOMIKO</h3>
+                    <p class="role lang" data-en="Co-founder & Visionary" data-fr="Co-fondateur & Visionnaire">Co-founder & Visionary</p>
+                    <p class="lang" data-en="Passionate about fintech innovation and developing user-centric solutions within UM6P Ben Guerir." data-fr="Passionné par l'innovation fintech et le développement de solutions centrées sur l'utilisateur au sein de l'UM6P à Ben Guerir.">Passionate about fintech innovation and developing user-centric solutions within UM6P Ben Guerir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team-section">
+        <div class="container">
+            <h2 class="section-title lang" data-en="Built by Future Engineers." data-fr="Construit par de Futurs Ingénieurs.">Built by Future Engineers</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="headshot-placeholder"><img src="images/user.webp" alt="Anass Fertat"></div>
+                    <h3 class="team-name">Anass Fertat</h3>
+                    <div class="team-role">Co-Founder & Technical Lead</div>
+                    <div class="team-bio">anass.fertat@nomiko.ma</div>
+                    <div class="footer-socials">
+                        <a href="https://github.com/alae-66/nomisma-koinos"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/anass-fertat-375120329/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>  
+                </div>
+                <div class="team-card">
+                    <div class="headshot-placeholder"><img src="images/user.webp" alt="Alae Sabir"></div>
+                    <h3 class="team-name">Alae Sabir</h3>
+                    <div class="team-role">Co-Founder & Technical Lead</div>
+                    <div class="team-bio">alae.sabir@nomiko.ma</div>
+                    <div class="footer-socials">
+                        <a href="https://github.com/alae-66/nomisma-koinos"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/alae-sabir-9b7a3633a/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="headshot-placeholder"><img src="images/user.webp" alt="Youness Latif"></div>
+                    <h3 class="team-name">Youness Latif</h3>
+                    <div class="team-role">Co-Founder & Technical Lead</div>
+                    <div class="team-bio">youness.latif@nomiko.ma</div>
+                    <div class="footer-socials">
+                        <a href="https://github.com/younessla246"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/youness-youn-3028b7323/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title lang" data-en="Contact & Location" data-fr="Contact & Localisation">Contact & Location</h2>
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h3 class="lang" data-en="Contact the Team" data-fr="Contactez l'équipe">Contact the Team</h3>
+                    <form>
+                        <input type="text" placeholder="Full Name" class="lang-input" data-en-ph="Full Name" data-fr-ph="Nom complet" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Your message..." rows="5" class="lang-input" data-en-ph="Your message..." data-fr-ph="Votre message..." required></textarea>
+                        <button type="submit" class="btn-send lang" data-en="Send" data-fr="Envoyer">Send</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-box">
+                        <h3 class="lang" data-en="Coordinates" data-fr="Coordonnées">Coordinates</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> <strong class="lang" data-en="Address :" data-fr="Adresse :">Address :</strong> Campus UM6P, Ben Guerir, Morocco</p>
+                        <p><i class="fas fa-envelope"></i> <strong>Email :</strong> contact@nomiko.ma</p>
+                        <p><i class="fas fa-envelope"></i> <strong class="lang" data-en="Phone Number :" data-fr="Numéro de téléphone :">Phone Number :</strong> 0500-000000</p>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3386.368725845014!2d-7.951012323530392!3d32.22728957388796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdaf67666f7f631b%3A0x633d455b85a1a1f0!2sUM6P%20-%20Mohammed%20VI%20Polytechnic%20University!5e0!3m2!1sfr!2sma!4v1713500000000!5m2!1sfr!2sma" width="100%" height="220" style="border:0; border-radius:15px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p class="lang" data-en="© 2026 FLOUSSNA Fintech. Co-founded by NOMIKO. Made with passion in Ben Guerir." data-fr="© 2026 FLOUSSNA Fintech. Co-fondé par NOMIKO. Réalisé avec passion à Ben Guerir.">© 2026 FLOUSSNA Fintech. Co-founded by NOMIKO. Made with passion in Ben Guerir.</p>
+            <div class="social-platforms">
+                <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchLang(lang) {
+            // 1. Traduit les éléments simples (Titres, boutons, badges)
+            document.querySelectorAll('.lang').forEach(el => {
+                const text = el.getAttribute('data-' + lang);
+                if (text) el.innerHTML = text;
+            });
+
+            // 2. Bascule l'affichage des gros blocs de texte (Description)
+            if (lang === 'en') {
+                document.querySelector('.content-en').style.display = 'block';
+                document.querySelector('.content-fr').style.display = 'none';
+            } else {
+                document.querySelector('.content-en').style.display = 'none';
+                document.querySelector('.content-fr').style.display = 'block';
+            }
+
+            // 3. Reste du script (Boutons et placeholders)
+            document.querySelectorAll('.lang-input').forEach(el => {
+                el.placeholder = el.getAttribute('data-' + lang + '-ph');
+            });
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+            document.documentElement.lang = lang;
+        }
+
+        function highlightStores() {
+            // On récupère les deux boutons d'installation
+            const storeButtons = document.querySelectorAll('.install-button');
+            
+            storeButtons.forEach(button => {
+                // On ajoute la classe d'animation
+                button.classList.add('pulse-animation');
+                
+                // On retire la classe après 1.2 seconde (durée de l'animation) 
+                // pour pouvoir la relancer au prochain clic
+                setTimeout(() => {
+                    button.classList.remove('pulse-animation');
+                }, 1200);
+            });
+        }
+
+        /* --- SCRIPT DU CARROUSEL 3D --- */
+        let currentAngle = 0; // L'angle de rotation actuel du cylindre
+        const carousel = document.querySelector('.carousel-3d');
+        const items = document.querySelectorAll('.carousel-3d-item');
+
+        function rotateCarousel(direction) {
+            // direction = -1 pour précédent (gauche), 1 pour suivant (droite)
+            
+            // 1. Met à jour l'angle de rotation (on tourne de 120 degrés à chaque clic)
+            currentAngle += (direction * -120);
+            
+            // 2. Applique la rotation au cylindre
+            carousel.style.transform = `translateZ(-500px) rotateY(${currentAngle}deg)`;
+            
+            // 3. Optionnel : Gérer l'opacité (mettre en valeur la face active)
+            updateActiveFace();
+        }
+
+        function updateActiveFace() {
+            // Calcul de l'index de la face active (basé sur l'angle)
+            // C'est un peu technique, mais cela permet de gérer l'opacité
+            const normalizedAngle = (currentAngle % 360 + 360) % 360; // Garde l'angle entre 0 et 360
+            let activeIndex;
+            
+            if (normalizedAngle === 0) activeIndex = 0; // Front
+            else if (normalizedAngle === 240) activeIndex = 1; // Right
+            else if (normalizedAngle === 120) activeIndex = 2; // Left
+            
+            items.forEach((item, index) => {
+                item.classList.toggle('is-active', index === activeIndex);
+            });
+        }
+
+        // Initialise la face active au chargement
+        updateActiveFace();
+    </script>
+</body>
+</html>
