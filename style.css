@@ -135,6 +135,81 @@ display: block;
     filter: drop-shadow(0 15px 20px rgba(0,0,0,0.15));
 }
 
+/* --- SECTION DESCRIPTION DÉTAILLÉE --- */
+.app-description-detail {
+    padding: 100px 0;
+    background-color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+/* On ajoute un petit élément décoratif en arrière-plan pour le style API/Code */
+.app-description-detail::before {
+    content: "{ API-first }";
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    font-size: 8rem;
+    font-weight: 800;
+    color: rgba(1, 36, 184, 0.03);
+    user-select: none;
+}
+
+.description-content {
+    max-width: 800px; /* On limite la largeur pour une lecture confortable */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.vision-badge {
+    color: var(--primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.description-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.description-content h2 span {
+    color: var(--primary);
+}
+
+.description-content p {
+    font-size: 1.15rem;
+    color: #475569;
+    margin-bottom: 20px;
+    text-align: justify; /* Pour un aspect plus formel/technique */
+    line-height: 1.8;
+}
+
+.description-content strong {
+    color: var(--dark);
+    font-weight: 600;
+}
+
+/* Ajustement Mobile */
+@media (max-width: 768px) {
+    .app-description-detail {
+        padding: 60px 0;
+    }
+    .description-content h2 {
+        font-size: 1.8rem;
+    }
+    .description-content p {
+        font-size: 1rem;
+        text-align: left; /* Plus lisible sur petit écran */
+    }
+}
+
 /* --- SECTION PARTENAIRES --- */
 .partners-section {
 padding: 60px 0;
