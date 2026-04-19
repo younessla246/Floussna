@@ -135,81 +135,6 @@ display: block;
     filter: drop-shadow(0 15px 20px rgba(0,0,0,0.15));
 }
 
-/* --- SECTION DESCRIPTION DÉTAILLÉE --- */
-.app-description-detail {
-    padding: 100px 0;
-    background-color: var(--white);
-    position: relative;
-    overflow: hidden;
-}
-
-/* On ajoute un petit élément décoratif en arrière-plan pour le style API/Code */
-.app-description-detail::before {
-    content: "{ API-first }";
-    position: absolute;
-    top: 20px;
-    right: -20px;
-    font-size: 8rem;
-    font-weight: 800;
-    color: rgba(1, 36, 184, 0.03);
-    user-select: none;
-}
-
-.description-content {
-    max-width: 800px; /* On limite la largeur pour une lecture confortable */
-    margin: 0 auto;
-    text-align: center;
-}
-
-.vision-badge {
-    color: var(--primary);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.85rem;
-    display: block;
-    margin-bottom: 15px;
-}
-
-.description-content h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    letter-spacing: -1px;
-    margin-bottom: 30px;
-    line-height: 1.2;
-}
-
-.description-content h2 span {
-    color: var(--primary);
-}
-
-.description-content p {
-    font-size: 1.15rem;
-    color: #475569;
-    margin-bottom: 20px;
-    text-align: justify; /* Pour un aspect plus formel/technique */
-    line-height: 1.8;
-}
-
-.description-content strong {
-    color: var(--dark);
-    font-weight: 600;
-}
-
-/* Ajustement Mobile */
-@media (max-width: 768px) {
-    .app-description-detail {
-        padding: 60px 0;
-    }
-    .description-content h2 {
-        font-size: 1.8rem;
-    }
-    .description-content p {
-        font-size: 1rem;
-        text-align: left; /* Plus lisible sur petit écran */
-    }
-}
-
 /* --- SECTION PARTENAIRES --- */
 .partners-section {
 padding: 60px 0;
@@ -520,5 +445,98 @@ footer { padding: 60px 0; background: var(--dark); color: #fff; text-align: cent
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%); /* Centre parfaitement derrière l'icône */
+    }
+}
+
+/* --- SECTION ÉQUIPE MISE À JOUR --- */
+.team-section {
+    padding: 100px 0;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Pour le mobile */
+    margin-top: 50px;
+}
+
+.team-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 30px;
+    border: 1px solid #f1f5f9;
+    box-shadow: var(--shadow-sm);
+    max-width: 320px;
+    transition: 0.4s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+.headshot-placeholder {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--gray-bg);
+    border: 3px solid var(--primary-light);
+}
+
+.headshot-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-name {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+    color: var(--dark);
+}
+
+.team-role {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.team-bio {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-socials a {
+    font-size: 1.3rem;
+    color: #94a3b8;
+    transition: 0.3s;
+}
+
+.footer-socials a:hover {
+    color: var(--primary);
+    transform: scale(1.2);
+}
+
+/* Ajustement Mobile */
+@media (max-width: 768px) {
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
     }
 }
