@@ -856,3 +856,32 @@ footer { padding: 60px 0; background: var(--dark); color: #fff; text-align: cent
         margin: 0;
     }
 }
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex !important; /* Force l'apparition des barres */
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .nav-links {
+        display: none; /* Caché par défaut sur mobile */
+        position: fixed;
+        top: 70px; /* Ajuste selon la hauteur de ta nav */
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: white; /* Mets une couleur solide pour tester au début */
+        flex-direction: column;
+        padding: 40px 0;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    /* LA CLASSE QUI ACTIVE LE MENU */
+    .nav-links.active {
+        display: flex !important; 
+    }
+}
