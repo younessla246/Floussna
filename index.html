@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<nav>
+    <nav>
         <div class="container nav-flex">
             <div class="logo">FLOU<span>SSNA</span></div>
             
@@ -19,13 +19,13 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-    
+
             <ul class="nav-links">  
                 <li><a href="#services" class="lang" data-en="Services" data-fr="Services">Services</a></li>
                 <li><a href="#partenaires" class="lang" data-en="Partners" data-fr="Partenaires">Partners</a></li>
                 <li><a href="#team" class="lang" data-en="Team" data-fr="L'Équipe">Team</a></li>
                 <li><a href="#contact" class="lang" data-en="Contact" data-fr="Contact">Contact</a></li>
-                <li><a href="#" class="btn-nav lang" data-en="Install" data-fr="Installer">Install</a></li>
+                <li><a href="#" class="btn-nav lang" data-en="Install" data-fr="Installer" onclick="highlightStores()">Install</a></li>
                 <li class="lang-switcher">
                     <button onclick="switchLang('en')" id="btn-en" class="active">EN</button>
                     <button onclick="switchLang('fr')" id="btn-fr">FR</button>
@@ -62,7 +62,7 @@
 
             <div class="hero-image">
                 <div class="app-identity-wrapper">
-                    <img src="floussna_icone.jpeg" class="app-icone-large" alt="Icône FLOUSSNA">
+                    <img src="images/floussna_icone.jpeg" class="app-icone-large" alt="Icône FLOUSSNA">
                     <p class="app-name-display">FLOUSSNA</p>
                 </div>
             </div>
@@ -79,7 +79,7 @@
                     <div class="carousel-3d-item is-front">
                         <div class="phone-mockup-store">
                             <div class="screen-content">
-                                <img src="home_page.jpeg" alt="FLOUSSNA Home Screen">
+                                <img src="images/home_page.jpeg" alt="FLOUSSNA Home Screen">
                             </div>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                     <div class="carousel-3d-item is-right">
                         <div class="phone-mockup-store">
                             <div class="screen-content">
-                                <img src="wallet.jpeg" alt="FLOUSSNA Wallet Screen">
+                                <img src="images/wallet.jpeg" alt="FLOUSSNA Wallet Screen">
                             </div>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                     <div class="carousel-3d-item is-left">
                         <div class="phone-mockup-store">
                             <div class="screen-content">
-                                <img src="wallet_view.jpeg" alt="FLOUSSNA Wallet View">
+                                <img src="images/wallet_view.jpeg" alt="FLOUSSNA Wallet View">
                             </div>
                         </div>
                     </div>
@@ -187,7 +187,7 @@
             <h2 class="section-title lang" data-en="Built by Future Engineers." data-fr="Construit par de Futurs Ingénieurs.">Built by Future Engineers</h2>
             <div class="team-grid">
                 <div class="team-card">
-                    <div class="headshot-placeholder"><img src="user.webp" alt="Anass Fertat"></div>
+                    <div class="headshot-placeholder"><img src="images/user.webp" alt="Anass Fertat"></div>
                     <h3 class="team-name">Anass Fertat</h3>
                     <div class="team-role">Co-Founder & Technical Lead</div>
                     <div class="team-bio">anass.fertat@nomiko.ma</div>
@@ -197,7 +197,7 @@
                     </div>  
                 </div>
                 <div class="team-card">
-                    <div class="headshot-placeholder"><img src="user.webp" alt="Alae Sabir"></div>
+                    <div class="headshot-placeholder"><img src="images/user.webp" alt="Alae Sabir"></div>
                     <h3 class="team-name">Alae Sabir</h3>
                     <div class="team-role">Co-Founder & Technical Lead</div>
                     <div class="team-bio">alae.sabir@nomiko.ma</div>
@@ -207,7 +207,7 @@
                     </div>
                 </div>
                 <div class="team-card">
-                    <div class="headshot-placeholder"><img src="user.webp" alt="Youness Latif"></div>
+                    <div class="headshot-placeholder"><img src="images/user.webp" alt="Youness Latif"></div>
                     <h3 class="team-name">Youness Latif</h3>
                     <div class="team-role">Co-Founder & Technical Lead</div>
                     <div class="team-bio">youness.latif@nomiko.ma</div>
@@ -341,18 +341,16 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             const menuBtn = document.getElementById('mobile-menu');
-            const navList = document.querySelector('.nav-links');
-        
+            const navLinks = document.querySelector('.nav-links');
+
             if (menuBtn) {
-                menuBtn.addEventListener('click', function() {
-                    // Ajoute/Enlève la classe active pour afficher le menu
-                    navList.classList.toggle('active');
-                    // Ajoute/Enlève l'animation des barres (X)
-                    menuBtn.classList.toggle('is-active');
-                    console.log("Menu cliqué !"); // Regarde dans ta console F12 pour voir si ça s'affiche
-                });
+                menuBtn.addEventListener('click', () => {
+                menuBtn.classList.toggle('is-active'); // Pour le X
+                navLinks.classList.toggle('active');   // Pour faire descendre le menu
+            });
             }
         });
+
     </script>
 </body>
 </html>
