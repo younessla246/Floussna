@@ -815,73 +815,56 @@ footer { padding: 60px 0; background: var(--dark); color: #fff; text-align: cent
 
 /* --- RESPONSIVE MOBILE NAVIGATION --- */
 @media (max-width: 768px) {
+    /* On force l'affichage des 3 barres */
     .menu-toggle {
-        display: flex; /* Visible sur téléphone */
-        z-index: 1001;
+        display: flex !important; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1100;
+        cursor: pointer;
     }
 
-    /* Animation du menu Burger en "X" quand il est ouvert */
+    /* Animation des barres en X */
     .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
     .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
     .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
+    /* Le menu mobile */
     .nav-links {
+        display: flex; /* On utilise flex pour l'alignement */
         position: fixed;
-        top: -100%; /* Caché en haut au début */
+        top: -100vh; /* Il est caché tout en haut, hors de l'écran */
         left: 0;
-        flex-direction: column;
-        background: var(--glass);
-        backdrop-filter: blur(15px);
         width: 100%;
-        text-align: center;
-        transition: 0.4s ease;
-        box-shadow: var(--shadow-lg);
-        padding: 80px 0 40px;
+        height: auto;
+        flex-direction: column;
+        background: white; /* Couleur solide pour être sûr qu'on le voit */
+        padding: 100px 0 40px;
         gap: 25px;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: var(--shadow-lg);
         z-index: 1000;
+        text-align: center;
     }
 
-    /* Quand on clique, on fait descendre le menu */
+    /* LA SEULE CLASSE POUR ACTIVER LE MENU */
     .nav-links.active {
-        top: 0;
+        top: 0; /* Il descend à sa position normale */
+    }
+
+    .nav-links li {
+        width: 100%;
     }
 
     .btn-nav {
         display: inline-block;
-        width: 80%; /* Plus large sur mobile pour cliquer facilement */
+        width: 80%;
+        margin: 0 auto;
     }
-    
+
     .lang-switcher {
         justify-content: center;
-        margin: 0;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: flex !important; /* Force l'apparition des barres */
-        flex-direction: column;
-        cursor: pointer;
-        z-index: 1100;
-    }
-
-    .nav-links {
-        display: none; /* Caché par défaut sur mobile */
-        position: fixed;
-        top: 70px; /* Ajuste selon la hauteur de ta nav */
-        left: 0;
-        width: 100%;
-        height: auto;
-        background: white; /* Mets une couleur solide pour tester au début */
-        flex-direction: column;
-        padding: 40px 0;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-        z-index: 1000;
-    }
-
-    /* LA CLASSE QUI ACTIVE LE MENU */
-    .nav-links.active {
-        display: flex !important; 
+        margin-top: 10px;
     }
 }
